@@ -1,9 +1,9 @@
 import { EmptyOpts } from './types/emptyOpts';
-import { default as isEmpty } from './isEmpty';
-import { default as isEmptyItem } from './isEmptyItem';
+import { isEmpty } from './isEmpty';
+import { isEmptyItem } from './isEmptyItem';
 
 
-export default function removeEmptyItems(list : any[], opts : EmptyOpts = {}) : any[] {
+export function removeEmptyItems(list : any[], opts : EmptyOpts = {}) : any[] {
 	opts = {
 		recursive          : false,
 		includeEmptyString : false,

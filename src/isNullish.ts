@@ -1,3 +1,3 @@
-export default function isNullish(item : any) : boolean {
+export function isNullish(item : any) : boolean {
 	return item == null;
 }

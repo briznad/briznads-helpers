@@ -1,8 +1,8 @@
-import { default as parseDate } from './parseDate';
-import { default as isInvalidDate } from './isInvalidDate';
+import { parseDate } from './parseDate';
+import { isInvalidDate } from './isInvalidDate';
 
 
-export default function getTimeString(date : Date | string | number) : string {
+export function getTimeString(date : Date | string | number) : string {
 	const dateObj = parseDate(date);
 
 	return isInvalidDate(dateObj)

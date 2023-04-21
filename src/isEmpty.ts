@@ -1,10 +1,10 @@
 import type { EmptyOpts } from './types/emptyOpts';
 
-import { default as isEmptyItem } from './isEmptyItem';
-import { default as removeEmptyItems } from './removeEmptyItems';
+import { isEmptyItem } from './isEmptyItem';
+import { removeEmptyItems } from './removeEmptyItems';
 
 
-export default function isEmpty(item : any, opts : EmptyOpts = {}) : boolean {
+export function isEmpty(item : any, opts : EmptyOpts = {}) : boolean {
 	opts = {
 		recursive          : false,
 		includeEmptyString : false,

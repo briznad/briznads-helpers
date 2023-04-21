@@ -1,4 +1,4 @@
-export default function flattenEdgeNodeArray(data : any = {}, preserveCursor : boolean = false, cursorKey : string = '_cursor') : any[] {
+export function flattenEdgeNodeArray(data : any = {}, preserveCursor : boolean = false, cursorKey : string = '_cursor') : any[] {
 	const arr : any[] = data.edges ?? data ?? [];
 
 	return Array.isArray(arr)

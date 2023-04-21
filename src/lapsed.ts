@@ -1,4 +1,4 @@
-export default function lapsed(ms : number, abbreviate : boolean = false, precise : boolean = false, separator? : string) : string {
+export function lapsed(ms : number, abbreviate : boolean = false, precise : boolean = false, separator? : string) : string {
 	if (ms == null) {
 		return '';
 	}

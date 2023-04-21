@@ -1,7 +1,7 @@
 import { customAlphabet } from 'nanoid';
 
 
-export default function createId(characterSetType? : 'uppercase' | 'lowercase' | 'letters' | 'html_id', length : number = 6) : string {
+export function createId(characterSetType? : 'uppercase' | 'lowercase' | 'letters' | 'html_id', length : number = 6) : string {
 	// we use a character set w/out lookalike characters
 	// e.g. 1, l, I, 0, O, o, u, v, 5, S, s, 2, Z
 	// https://github.com/CyberAP/nanoid-dictionary#nolookalikes
