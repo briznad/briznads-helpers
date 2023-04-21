@@ -1,24 +1,24 @@
 // types
-export { AnyMap, BooleanMap, NumberMap, StringListMap, StringMap } from '../dist/types/basics.js';
-export { EmptyOpts } from '../dist/types/emptyOpts.js';
+export type { AnyMap, BooleanMap, NumberMap, StringListMap, StringMap } from './types/basics';
+export type { EmptyOpts } from './types/emptyOpts';
 
 // functions
-export { ago } from '../dist/ago.js';
-export { createId } from '../dist/createId.js';
-export { deepCopy } from '../dist/deepCopy.js';
-export { flattenEdgeNodeArray } from '../dist/flattenEdgeNodeArray.js';
-export { getDateString } from '../dist/getDateString.js';
-export { getTimeString } from '../dist/getTimeString.js';
-export { isEmpty } from '../dist/isEmpty.js';
-export { isEmptyItem } from '../dist/isEmptyItem.js';
-export { isInvalidDate } from '../dist/isInvalidDate.js';
-export { isListPopulated } from '../dist/isListPopulated.js';
-export { isNullish } from '../dist/isNullish.js';
-export { lapsed } from '../dist/lapsed.js';
-export { listify } from '../dist/listify.js';
-export { parseDate } from '../dist/parseDate.js';
-export { removeEmptyItems } from '../dist/removeEmptyItems.js';
-export { sleep } from '../dist/sleep.js';
-export { sortNumerically } from '../dist/sortNumerically.js';
-export { uniqueArray } from '../dist/uniqueArray.js';
-export { uniqueFilter } from '../dist/uniqueFilter.js';
+export { ago } from './ago';
+export { createId } from './createId';
+export { deepCopy } from './deepCopy';
+export { flattenEdgeNodeArray } from './flattenEdgeNodeArray';
+export { getDateString } from './getDateString';
+export { getTimeString } from './getTimeString';
+export { isEmpty } from './isEmpty';
+export { isEmptyItem } from './isEmptyItem';
+export { isInvalidDate } from './isInvalidDate';
+export { isListPopulated } from './isListPopulated';
+export { isNullish } from './isNullish';
+export { lapsed } from './lapsed';
+export { listify } from './listify';
+export { parseDate } from './parseDate';
+export { removeEmptyItems } from './removeEmptyItems';
+export { sleep } from './sleep';
+export { sortNumerically } from './sortNumerically';
+export { uniqueArray } from './uniqueArray';
+export { uniqueFilter } from './uniqueFilter';

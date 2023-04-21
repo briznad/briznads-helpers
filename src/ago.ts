@@ -1,5 +1,5 @@
-import { lapsed } from '../dist/lapsed.js';
-import { parseDate } from '../dist/parseDate.js';
+import { lapsed } from './lapsed';
+import { parseDate } from './parseDate';
 
 
 export function ago(date : Date | string | number) : string {
