@@ -1,7 +1,7 @@
-import type { EmptyOpts } from './types/emptyOpts';
+import type { EmptyOpts } from '../dist/types/emptyOpts.js';
 
-import { isEmptyItem } from './isEmptyItem';
-import { removeEmptyItems } from './removeEmptyItems';
+import { isEmptyItem } from '../dist/isEmptyItem.js';
+import { removeEmptyItems } from '../dist/removeEmptyItems.js';
 
 
 export function isEmpty(item : any, opts : EmptyOpts = {}) : boolean {
