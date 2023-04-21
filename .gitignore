@@ -1,0 +1,24 @@
+# dependencies
+/node_modules
+
+# production
+/dist
+
+# environments
+.env
+.env.*
+
+# misc
+.DS_Store
+.vscode
+.idea
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional eslint cache
+.eslintcache
+
+#Logs
+*.log
