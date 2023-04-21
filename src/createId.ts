@@ -19,9 +19,9 @@ export function createId(characterSetType? : 'uppercase' | 'lowercase' | 'letter
 		characterSet = uppercaseLetters + lowercaseLetters;
 	}
 
-	const nanoid = customAlphabet(characterSet, length);
+	const idGenerator = customAlphabet(characterSet, length);
 
-	const id : string = nanoid();
+	const id : string = idGenerator();
 
 	// if the use of this function is to create html ids, insure first character is a letter
 	return characterSetType === 'html_id' && /^[^A-Za-z]/.test(id)
