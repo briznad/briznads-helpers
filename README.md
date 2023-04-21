@@ -5,7 +5,6 @@ Generic, zero-dependency* helper functions and types for use in disparate typesc
 ## install
 
 ```bash
-# create a new project in the current directory
 npm install briznads-helpers --save
 ```
 
