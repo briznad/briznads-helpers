@@ -1,4 +1,5 @@
-import { EmptyOpts } from './types/emptyOpts';
+import type { EmptyOpts } from './types/emptyOpts';
+
 import { isEmpty } from './isEmpty';
 import { isEmptyItem } from './isEmptyItem';
 
