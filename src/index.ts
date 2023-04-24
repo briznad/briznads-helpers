@@ -4,7 +4,7 @@ export type { EmptyOpts } from './types/emptyOpts';
 
 // functions
 export { ago } from './ago';
-export { createId } from './createId';
+export { default as createId } from './createId';
 export { deepCopy } from './deepCopy';
 export { flattenEdgeNodeArray } from './flattenEdgeNodeArray';
 export { getDateString } from './getDateString';
