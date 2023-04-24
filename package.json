@@ -2,11 +2,11 @@
   "name": "briznads-helpers",
   "version": "1.0.14",
   "description": "Generic, zero-dependency* helper functions and types for use in disparate typescript projects.",
-  "type": "module",
-  "module": "dist/index.js",
+  "type": "commonjs",
+  "main": "dist/index.js",
   "exports": {
     ".": {
-      "import": "./dist/index.js"
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
