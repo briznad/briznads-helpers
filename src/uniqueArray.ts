@@ -1,6 +1,6 @@
-import { uniqueFilter } from './uniqueFilter';
+import { default as uniqueFilter } from './uniqueFilter';
 
 
-export function uniqueArray(arr : any[]) : any[] {
+export default function uniqueArray(arr : any[]) : any[] {
 	return arr.filter(uniqueFilter);
 }

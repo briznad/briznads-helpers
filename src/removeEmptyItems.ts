@@ -1,10 +1,10 @@
 import type { EmptyOpts } from './types/emptyOpts';
 
-import { isEmpty } from './isEmpty';
-import { isEmptyItem } from './isEmptyItem';
+import { default as isEmpty } from './isEmpty';
+import { default as isEmptyItem } from './isEmptyItem';
 
 
-export function removeEmptyItems(list : any[], opts : EmptyOpts = {}) : any[] {
+export default function removeEmptyItems(list : any[], opts : EmptyOpts = {}) : any[] {
 	opts = {
 		recursive          : false,
 		includeEmptyString : false,
