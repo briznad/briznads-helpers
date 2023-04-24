@@ -1,7 +1,7 @@
 import type { EmptyOpts } from './types/emptyOpts';
 
-import { default as isEmptyItem } from './isEmptyItem';
-import { default as removeEmptyItems } from './removeEmptyItems';
+import { default as isEmptyItem } from './isEmptyItem.js';
+import { default as removeEmptyItems } from './removeEmptyItems.js';
 
 
 export default function isEmpty(item : any, opts : EmptyOpts = {}) : boolean {

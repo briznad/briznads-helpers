@@ -1,4 +1,4 @@
-import { default as isNullish } from './isNullish';
+import { default as isNullish } from './isNullish.js';
 
 
 export default function isEmptyItem(item : any, includeEmptyString : boolean = false) : boolean {

@@ -1,5 +1,5 @@
-import { default as parseDate } from './parseDate';
-import { default as isInvalidDate } from './isInvalidDate';
+import { default as parseDate } from './parseDate.js';
+import { default as isInvalidDate } from './isInvalidDate.js';
 
 
 export default function getDateString(date : Date | string | number) : string {

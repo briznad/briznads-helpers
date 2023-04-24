@@ -1,7 +1,7 @@
 import type { EmptyOpts } from './types/emptyOpts';
 
-import { default as isEmpty } from './isEmpty';
-import { default as isEmptyItem } from './isEmptyItem';
+import { default as isEmpty } from './isEmpty.js';
+import { default as isEmptyItem } from './isEmptyItem.js';
 
 
 export default function removeEmptyItems(list : any[], opts : EmptyOpts = {}) : any[] {
