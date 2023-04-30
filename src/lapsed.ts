@@ -94,7 +94,7 @@ export default function lapsed(ms : number, abbreviate : boolean = false, precis
 
 		const unitName : string = unit[ abbreviate ? 'short' : 'long' ];
 
-		const timeStr = parseCount(remainder, unitName.charAt(0)) + unitName + parsePlural(remainder);
+		const timeStr = parseCount(remainder, unitName.trim().charAt(0)) + unitName + parsePlural(remainder);
 
 		timeList.unshift(timeStr);
 	}
