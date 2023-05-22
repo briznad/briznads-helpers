@@ -1,5 +1,6 @@
 import { default as removeEmptyItems } from './removeEmptyItems.js';
 import { default as listify } from './listify.js';
+import { default as get } from './get.js';
 
 
 type QueryFunction = (item : any) => string;
@@ -109,7 +110,7 @@ export default class Query {
 	private static testObjectField(regexQuery : RegExp, testField : string | QueryFunction, item : any) : boolean {
 		const testee : string = typeof testField === 'function'
 			? testField(item)
-			: item[testField];
+			: get(item, testField.split('.'));
 
 		return regexQuery.test(testee);
 	}
