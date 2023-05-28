@@ -22,6 +22,8 @@ export { default as parseDate } from './parseDate.js';
 export { default as Query } from './query.js';
 export { default as removeEmptyItems } from './removeEmptyItems.js';
 export { default as sleep } from './sleep.js';
+export { default as smartSort } from './smartSort.js';
+export { default as smartSortFunction } from './smartSortFunction.js';
 export { default as sortNumerically } from './sortNumerically.js';
 export { default as uniqueArray } from './uniqueArray.js';
 export { default as uniqueFilter } from './uniqueFilter.js';

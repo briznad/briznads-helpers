@@ -23,7 +23,7 @@ export default function get(obj : object, props : string | Array<string | number
 	const propsArr = listify(props);
 
 	return propsArr.reduce(
-		(sum : any, value : any) => sum?.[ value ] ?? undefined,
+		(sum : any, prop : any) => sum?.[ prop ] ?? undefined,
 		obj,
 	);
 }
