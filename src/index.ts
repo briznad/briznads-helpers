@@ -1,7 +1,8 @@
 // types
 export type { AnyMap, BooleanMap, NumberMap, StringListMap, StringMap } from './types/basics';
 export type { EmptyOpts } from './types/emptyOpts';
-export type { QueryOptions } from './query';
+export type { QueryOptions } from './types/queryOptions';
+export type { ValueOf } from './types/valueOf';
 
 // functions
 export { default as ago } from './ago.js';
@@ -18,6 +19,7 @@ export { default as isListPopulated } from './isListPopulated.js';
 export { default as isNullish } from './isNullish.js';
 export { default as lapsed } from './lapsed.js';
 export { default as listify } from './listify.js';
+export { default as objectEntries } from './objectEntries.js';
 export { default as parseDate } from './parseDate.js';
 export { default as Query } from './query.js';
 export { default as removeEmptyItems } from './removeEmptyItems.js';

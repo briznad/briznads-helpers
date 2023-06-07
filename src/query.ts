@@ -1,15 +1,11 @@
+import type { QueryOptions } from './types/queryOptions';
+
 import { default as removeEmptyItems } from './removeEmptyItems.js';
 import { default as listify } from './listify.js';
 import { default as get } from './get.js';
 
 
 type QueryFunction = (item : any) => string;
-
-export type QueryOptions = {
-	matchPartialWords?   : boolean;
-	disregardQueryOrder? : boolean;
-	caseInsensitive?     : boolean;
-};
 
 
 export default class Query {
