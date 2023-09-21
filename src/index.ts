@@ -20,6 +20,8 @@ export { default as isNullish } from './isNullish.js';
 export { default as lapsed } from './lapsed.js';
 export { default as listify } from './listify.js';
 export { default as objectEntries } from './objectEntries.js';
+export { default as objectKeys } from './objectKeys.js';
+export { default as objectValues } from './objectValues.js';
 export { default as parseDate } from './parseDate.js';
 export { default as Query } from './query.js';
 export { default as removeEmptyItems } from './removeEmptyItems.js';
