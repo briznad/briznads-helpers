@@ -10,6 +10,10 @@ export interface BooleanMap {
 	[ key : string ] : boolean;
 }
 
+export interface TrueMap {
+	[ key : string ] : true;
+}
+
 export interface AnyMap {
 	[ key : string ] : any;
 }
