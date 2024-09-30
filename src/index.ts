@@ -1,5 +1,5 @@
 // types
-export type { AnyMap, BooleanMap, NumberMap, StringListMap, StringMap } from './types/basics';
+export type { AnyMap, BooleanMap, TrueMap, NumberMap, StringListMap, StringMap } from './types/basics';
 export type { EmptyOpts } from './types/emptyOpts';
 export type { QueryOptions } from './types/queryOptions';
 export type { ValueOf } from './types/valueOf';
