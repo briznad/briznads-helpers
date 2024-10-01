@@ -1,8 +1,9 @@
 // types
 export type { AnyMap, BooleanMap, TrueMap, NumberMap, StringListMap, StringMap } from './types/basics';
 export type { EmptyOpts } from './types/emptyOpts';
-export type { QueryOptions } from './types/queryOptions';
 export type { ValueOf } from './types/valueOf';
+export type { QueryOptions } from './query';
+export type { SortOptions, SortDirection } from './smartSort';
 
 // functions
 export { default as ago } from './ago.js';
