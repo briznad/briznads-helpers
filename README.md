@@ -28,7 +28,7 @@ printString();
 
 ## background
 
-This package brings together a number of helpful types and functions that I've found myself reaching for time and again. The package exports TypeScript source files directly, so consuming projects will compile the code themselves with tree-shaking support.
+This package brings together a number of helpful types and functions that I've found myself reaching for time and again. The package exports compiled JavaScript as native ESM modules with TypeScript type declarations, compatible with modern bundlers and supporting tree-shaking.
 
 ## documentation
 

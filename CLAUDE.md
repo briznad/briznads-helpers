@@ -4,9 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-`briznads-helpers` is a TypeScript utility library providing generic, zero-dependency helper functions and types for TypeScript projects. The package exports TypeScript source files directly (not compiled JavaScript).
+`briznads-helpers` is a TypeScript utility library providing generic, zero-dependency helper functions and types for TypeScript projects. The package exports compiled JavaScript with TypeScript declarations.
 
 ## Key Commands
+
+### Build
+```bash
+npm run build       # Compile TypeScript to JavaScript
+npm run clean       # Remove dist directory
+```
 
 ### Linting
 ```bash
@@ -14,14 +20,21 @@ npm run lint        # Check for issues
 npm run lint:fix    # Auto-fix issues
 ```
 
+### Publishing
+```bash
+npm run npm_publish # Build and publish to npm
+```
+
 ## Architecture
 
-### TypeScript-Only Package
+### Modern ESM Package
 
-The project exports **TypeScript source files directly** from the `src/` directory. Consuming projects must compile the TypeScript themselves.
+The project uses a **modern ESM-only build** targeting ES2022:
 
-- Entry point: `src/index.ts`
-- Configuration: `tsconfig-base.json`
+- Source: `src/` (TypeScript)
+- Output: `dist/` (JavaScript + type declarations)
+- Configuration: `tsconfig.json` with `moduleResolution: "bundler"`
+- Package type: `"module"` (pure ESM)
 
 ### Export Pattern
 
