@@ -7,7 +7,6 @@ export type { SortOptions, SortDirection } from './smartSort';
 
 // functions
 export { default as ago } from './ago.js';
-export { default as createId } from './createId.js';
 export { default as deepCopy } from './deepCopy.js';
 export { default as flattenEdgeNodeArray } from './flattenEdgeNodeArray.js';
 export { default as get } from './get.js';
