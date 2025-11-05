@@ -1,6 +1,6 @@
 {
   "name": "briznads-helpers",
-  "version": "1.8.2",
+  "version": "2.0.0",
   "description": "Generic, zero-dependency helper functions and types for use in disparate typescript projects.",
   "main": "src/index.ts",
   "types": "src/index.ts",
