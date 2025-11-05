@@ -27,14 +27,21 @@ npm run npm_publish # Build and publish to npm
 
 ## Architecture
 
-### Modern ESM Package
+### Dual Module Format Build System
 
-The project uses a **modern ESM-only build** targeting ES2022:
+The project compiles to **both ESM and CommonJS** formats for maximum compatibility:
 
-- Source: `src/` (TypeScript)
-- Output: `dist/` (JavaScript + type declarations)
-- Configuration: `tsconfig.json` with `moduleResolution: "bundler"`
-- Package type: `"module"` (pure ESM)
+- **ESM output**: `dist/esm/` (configured in `tsconfig-esm.json`)
+  - `module: "esnext"`, `target: "ES2022"`
+  - For modern bundlers and Node.js ESM imports
+
+- **CommonJS output**: `dist/cjs/` (configured in `tsconfig-cjs.json`)
+  - `module: "commonjs"`, `target: "ES2015"`
+  - For Node.js require() and tools like Jest
+
+Both extend `tsconfig-base.json` for shared configuration.
+
+After TypeScript compilation, `set_module_type.sh` creates `package.json` files in each output directory setting the appropriate `"type"` field (`"module"` or `"commonjs"`).
 
 ### Export Pattern
 
