@@ -79,8 +79,10 @@ export default class Query {
 		let escapedQuery : string;
 
 		if (queryArr.length > 1 && queryOpts.disregardQueryOrder) {
+			const boundary : string = queryOpts.matchPartialWords ? '' : '\\b';
+
 			const mappedArr = queryArr
-				.map(query => `(?=.*\\b${ this.regexEscape(query) }\\b)`);
+				.map(query => `(?=.*${ boundary }${ this.regexEscape(query) }${ boundary })`);
 
 			escapedQuery = `^${ mappedArr.join('') }.*$`;
 		} else {
@@ -112,6 +114,6 @@ export default class Query {
 			? testField(item)
 			: get(item, testField.split('.'));
 
-		return regexQuery.test(testee);
+		return testee == null ? false : regexQuery.test(testee);
 	}
 }
