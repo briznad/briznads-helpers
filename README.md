@@ -32,4 +32,27 @@ This package brings together a number of helpful types and functions that I've f
 
 ## documentation
 
-There isn't any, at least, not yet. That said, all functions are written in typescript and I endeavor to eschew cleverness in my code in favor of legibility. Therefore, the code should be somewhat self-documenting; it should be possible to view the individual functions and discern what the expected input and output types/patterns are. How laughably naive and/or unrealistic that last statement is, I'll leave for you to assess.
+Each helper has its own README with usage examples and argument reference.
+
+| Export | Description |
+| --- | --- |
+| [`ago`](src/ago/README.md) | Format a past date as `"X ago"`. |
+| [`deepCopy`](src/deepCopy/README.md) | JSON-based deep clone. |
+| [`flattenEdgeNodeArray`](src/flattenEdgeNodeArray/README.md) | Flatten a GraphQL edges/nodes connection. |
+| [`get`](src/get/README.md) | Safe nested property access by path. |
+| [`getDateString`](src/getDateString/README.md) | Date → `toString()`, `''` if invalid. |
+| [`getTimeString`](src/getTimeString/README.md) | Date → `toLocaleTimeString()`, `''` if invalid. |
+| [`isEmpty`, `isEmptyItem`, `removeEmptyItems`](src/isEmpty/README.md) | Emptiness checks sharing `EmptyOpts`. |
+| [`isInvalidDate`](src/isInvalidDate/README.md) | Test for missing or Invalid Date. |
+| [`isListPopulated`](src/isListPopulated/README.md) | Test for non-empty array. |
+| [`isNullish`](src/isNullish/README.md) | Test for `null` or `undefined`. |
+| [`lapsed`](src/lapsed/README.md) | Format a millisecond duration as human text. |
+| [`listify`](src/listify/README.md) | Ensure a value is an array. |
+| [`objectEntries`, `objectKeys`, `objectValues`](src/objectHelpers/README.md) | Type-preserving `Object.*` wrappers. |
+| [`parseDate`](src/parseDate/README.md) | Normalize a date-like input to `Date`. |
+| [`Query`](src/query/README.md) | Regex-based filtering of lists and object arrays. |
+| [`roundToDecimals`](src/roundToDecimals/README.md) | Round a number to N decimal places. |
+| [`sleep`](src/sleep/README.md) | Async delay for N milliseconds. |
+| [`smartSort`, `smartSortFunction`](src/smartSort/README.md) | Sort with sensible defaults; comparator exposed. |
+| [`sortNumerically`](src/sortNumerically/README.md) | Ascending numeric sort. |
+| [`uniqueArray`, `uniqueFilter`](src/uniqueArray/README.md) | Deduplicate an array; filter callback exposed. |
