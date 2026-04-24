@@ -1,5 +1,75 @@
 export type LapsedFormat = 'full' | 'short' | 'abbreviate';
 
+type LapsedUnit = {
+	readonly abbreviation : string;
+	readonly full         : string;
+	readonly short?       : string;
+	readonly plural?      : string;
+	readonly divisor?     : number;
+};
+
+// each divisor converts the current unit into the next-larger unit (not an absolute ms value)
+const unitList : readonly LapsedUnit[] = [
+	{
+		abbreviation : 'ms',
+		full         : 'millisecond',
+		divisor      : 1000, // 1000 ms → 1 s
+	},
+	{
+		abbreviation : 's',
+		short        : 'sec',
+		full         : 'second',
+		divisor      : 60,
+	},
+	{
+		abbreviation : 'm',
+		short        : 'min',
+		full         : 'minute',
+		divisor      : 60,
+	},
+	{
+		abbreviation : 'hr',
+		full         : 'hour',
+		divisor      : 24,
+	},
+	{
+		abbreviation : 'd',
+		full         : 'day',
+		divisor      : 7,
+	},
+	{
+		abbreviation : 'wk',
+		full         : 'week',
+		divisor      : 4,
+	},
+	{
+		abbreviation : 'mo',
+		full         : 'month',
+		divisor      : 12,
+	},
+	{
+		abbreviation : 'yr',
+		full         : 'year',
+		divisor      : 10,
+	},
+	{
+		abbreviation : 'dec',
+		full         : 'decade',
+		divisor      : 10,
+	},
+	{
+		abbreviation : 'c',
+		full         : 'century',
+		plural       : 'centuries',
+		divisor      : 10,
+	},
+	{
+		abbreviation : 'mil',
+		full         : 'millennium',
+		plural       : 'millennia',
+	},
+];
+
 export default function lapsed(ms : number, format : LapsedFormat = 'full', precise : boolean = false, separator? : string) : string {
 	if (ms == null) {
 		return '';
@@ -16,68 +86,6 @@ export default function lapsed(ms : number, format : LapsedFormat = 'full', prec
 
 		return `${ unit }s`;
 	}
-
-	// each divisor converts the current unit into the next-larger unit (not an absolute ms value)
-	const unitList = [
-		{
-			abbreviation : 'ms',
-			full         : 'millisecond',
-			divisor      : 1000, // 1000 ms → 1 s
-		},
-		{
-			abbreviation : 's',
-			short        : 'sec',
-			full         : 'second',
-			divisor      : 60,
-		},
-		{
-			abbreviation : 'm',
-			short        : 'min',
-			full         : 'minute',
-			divisor      : 60,
-		},
-		{
-			abbreviation : 'hr',
-			full         : 'hour',
-			divisor      : 24,
-		},
-		{
-			abbreviation : 'd',
-			full         : 'day',
-			divisor      : 7,
-		},
-		{
-			abbreviation : 'wk',
-			full         : 'week',
-			divisor      : 4,
-		},
-		{
-			abbreviation : 'mo',
-			full         : 'month',
-			divisor      : 12,
-		},
-		{
-			abbreviation : 'yr',
-			full         : 'year',
-			divisor      : 10,
-		},
-		{
-			abbreviation : 'dec',
-			full         : 'decade',
-			divisor      : 10,
-		},
-		{
-			abbreviation : 'c',
-			full         : 'century',
-			plural       : 'centuries',
-			divisor      : 10,
-		},
-		{
-			abbreviation : 'mil',
-			full         : 'millennium',
-			plural       : 'millennia',
-		},
-	];
 
 	// returns "a"/"an" for count=1 in full non-precise mode; "an" before vowel-sound units (hour)
 	const parseCount = (count : number, unitFirstLetter : string) : string =>
@@ -99,13 +107,11 @@ export default function lapsed(ms : number, format : LapsedFormat = 'full', prec
 
 	let dividend : number = ms;
 
-	// iterate from smallest unit (ms) to largest (yr), peeling off each unit's value via modulo
-	for (const i in unitList) {
+	// iterate from smallest unit (ms) to largest (mil), peeling off each unit's value via modulo
+	for (const unit of unitList) {
 		if (dividend === 0) {
 			break;
 		}
-
-		const unit = unitList[i];
 
 		let remainder : number = 0;
 
