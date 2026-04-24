@@ -18,6 +18,7 @@ export { default as isInvalidDate } from './isInvalidDate/index.js';
 export { default as isListPopulated } from './isListPopulated/index.js';
 export { default as isNullish } from './isNullish/index.js';
 export { default as lapsed } from './lapsed/index.js';
+export type { LapsedFormat } from './lapsed/index.js';
 export { default as listify } from './listify/index.js';
 export { default as objectEntries } from './objectHelpers/objectEntries.js';
 export { default as objectKeys } from './objectHelpers/objectKeys.js';

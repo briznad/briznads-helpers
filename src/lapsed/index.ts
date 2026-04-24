@@ -1,4 +1,6 @@
-export default function lapsed(ms : number, format : 'full' | 'short' | 'abbreviate' = 'full', precise : boolean = false, separator? : string) : string {
+export type LapsedFormat = 'full' | 'short' | 'abbreviate';
+
+export default function lapsed(ms : number, format : LapsedFormat = 'full', precise : boolean = false, separator? : string) : string {
 	if (ms == null) {
 		return '';
 	}
